@@ -94,7 +94,7 @@ bool GameActor::tratarDeMover(MoveDirection _direccionNueva) {
 		break;
 	}
 
-	// Si tileDestino es nullptr, no se puede avanzar
+	// Si tileDestino es nullptr, no avanza
 	if (tileDestino == nullptr) {
 		setTileSiguiente(nullptr);
 		return false;

@@ -85,7 +85,7 @@ bool MapGenerator::crearObjetosJuego(string _path)
 				switch (chars[i]) {
 				case '0':
 					objetoNuevo = new SueloCesped(texturaSueloCesped, tileNuevo);
-					if (x > bombermanPosicionX && bombermanPosicionX == -1) {
+					if (x > bombermanPosicionX || bombermanPosicionX==-1) {
 						bombermanPosicionX = x;
 						bombermanPosicionY = y;
 					}
@@ -124,11 +124,11 @@ bool MapGenerator::crearObjetosJuego(string _path)
 						bombermanPosicionY = y;
 					}
 
-					if (x > bomberwomanPosicionX || y > bomberwomanPosicionY) {
+					if (x > bomberwomanPosicionX || y > bomberwomanPosicionY ) {
 						bomberwomanPosicionX = x;
 						bomberwomanPosicionY = y;
 					}
-					if (x > bombermanRobotPosicionX || y > bombermanRobotPosicionY) {
+					if (x > bombermanRobotPosicionX  || y > bombermanRobotPosicionY) {
 						bombermanRobotPosicionX = x;
 						bombermanRobotPosicionY = y;
 					}

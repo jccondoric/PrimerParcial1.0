@@ -157,7 +157,7 @@ bool MapGenerator::crearObjetosJuego(string _path)
 		vectorObjectosJuego.push_back(objetoBomberman);
 	}
 
-
+	//Movimiento BombermanRobot teclas
 	GameObject* objetoBombermanRobot = nullptr;
 	tileNuevo = tilesGraph->getTileEn(bomberwomanPosicionX, bombermanRobotPosicionY);
 	objetoBombermanRobot = new Bomberman(texturaBombermanRobot, tileNuevo);
@@ -183,7 +183,7 @@ bool MapGenerator::crearObjetosJuego(string _path)
 	}*/
 
 
-
+	
 	GameObject* objetoBomberwoman = nullptr;
 	tileNuevo = tilesGraph->getTileEn(bomberwomanPosicionX, bomberwomanPosicionY);
 	objetoBomberwoman = new Bomberman(texturaBomberwoman, tileNuevo);

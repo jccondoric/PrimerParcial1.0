@@ -4,7 +4,7 @@ GamePawn::GamePawn():GameActor(), keyboardInput(KeyboardInput::Instance())
 {
 
 }
-
+///estos parametros pasaselos a gameactor
 GamePawn::GamePawn(Texture* _textura, Tile* _tileActual):GameActor(_textura, _tileActual)
 {
 	keyboardInput = KeyboardInput::Instance();

@@ -147,7 +147,7 @@ bool MapGenerator::crearObjetosJuego(string _path)
 	}
 
 
-	
+	//boxing
 	GameObject* objetoBomberman = nullptr;
 	Tile* tileNuevo = tilesGraph->getTileEn(bombermanPosicionX, bombermanPosicionY);
 	objetoBomberman = new Bomberman(texturaBomberman, tileNuevo);
@@ -173,19 +173,11 @@ bool MapGenerator::crearObjetosJuego(string _path)
 		vectorObjectosJuego.push_back(objetoBombermanRobot);
 	}
 
-	/*GameObject* objetoBombermanRobot = nullptr;
-	Tile* tileNuevo2 = tilesGraph->getTileEn(bombermanRobotPosicionX, bombermanRobotPosicionY);
-	objetoBombermanRobot = new Bomberman(texturaBombermanRobot, tileNuevo2);
-	if (objetoBomberman != nullptr) {
-		((GameActor*)objetoBombermanRobot)->setPosicionX(bombermanRobotPosicionX * 34);
-		((GameActor*)objetoBombermanRobot)->setPosicionY(bombermanRobotPosicionY * 34);
-		vectorObjectosJuego.push_back(objetoBombermanRobot);
-	}*/
-
-
-	
+		
 	GameObject* objetoBomberwoman = nullptr;
+	//Creando un tile  en funcion              a donde tiene que crear el bomber
 	tileNuevo = tilesGraph->getTileEn(bomberwomanPosicionX, bomberwomanPosicionY);
+	//le paso la textura
 	objetoBomberwoman = new Bomberman(texturaBomberwoman, tileNuevo);
 	if (objetoBomberwoman != nullptr) {
 		((GameActor*)objetoBomberwoman)->setPosicionX(bomberwomanPosicionX * 34);

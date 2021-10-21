@@ -1,4 +1,5 @@
 #include "MuroLadrillo.h"
+//declaracion del metodo										//gameactor le paso texture y tile
 MuroLadrillo::MuroLadrillo(Texture* _textura, Tile* _tileActual) :GameActor(_textura, _tileActual)
 {
 	tileActual = _tileActual;

@@ -159,13 +159,30 @@ bool MapGenerator::crearObjetosJuego(string _path)
 
 
 	GameObject* objetoBombermanRobot = nullptr;
+	tileNuevo = tilesGraph->getTileEn(bomberwomanPosicionX, bombermanRobotPosicionY);
+	objetoBombermanRobot = new Bomberman(texturaBombermanRobot, tileNuevo);
+	if (objetoBombermanRobot != nullptr) {
+		((GameActor*)objetoBomberman)->setPosicionX(bomberwomanPosicionX * 34);
+		((GameActor*)objetoBombermanRobot)->setPosicionY(bomberwomanPosicionY * 34);
+		((GamePawn*)objetoBombermanRobot)->setBotomBomba(SDLK_g);
+		((GamePawn*)objetoBombermanRobot)->setBotomArriba(SDLK_i);
+		((GamePawn*)objetoBombermanRobot)->setBotomAbajo(SDLK_k);
+		((GamePawn*)objetoBombermanRobot)->setBotomIzquierda(SDLK_j);
+		((GamePawn*)objetoBombermanRobot)->setBotomDerecha(SDLK_l);
+
+		vectorObjectosJuego.push_back(objetoBombermanRobot);
+	}
+
+	/*GameObject* objetoBombermanRobot = nullptr;
 	Tile* tileNuevo2 = tilesGraph->getTileEn(bombermanRobotPosicionX, bombermanRobotPosicionY);
 	objetoBombermanRobot = new Bomberman(texturaBombermanRobot, tileNuevo2);
 	if (objetoBomberman != nullptr) {
 		((GameActor*)objetoBombermanRobot)->setPosicionX(bombermanRobotPosicionX * 34);
 		((GameActor*)objetoBombermanRobot)->setPosicionY(bombermanRobotPosicionY * 34);
 		vectorObjectosJuego.push_back(objetoBombermanRobot);
-	}
+	}*/
+
+
 
 	GameObject* objetoBomberwoman = nullptr;
 	tileNuevo = tilesGraph->getTileEn(bomberwomanPosicionX, bomberwomanPosicionY);
